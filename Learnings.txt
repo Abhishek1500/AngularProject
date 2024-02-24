@@ -4,3 +4,90 @@ Main components of
 create newapp=> ng new namepapp
 run app=>ng serve
 
+Databinding
+one way binding is presenting the data on webpage from class (use interpolation {{}} for that)
+two way change in html and change reflect in component property too ( use ngModel for that)
+
+component building
+
+
+create an component
+ng g component nameof component  (g is generate but you can write anything)
+reder the components
+basically the component has its own tag name use it in other places
+
+
+for creating complex datatypes we use interfaces
+command=> ng g interface path/name
+
+for 2 way binding we need FormsModule in app.modules
+
+localstorage
+
+lifecycle hooks learn it before use
+ngonit use it to get the data from ocalstorage on using component
+
+bootstrap
+npm install bootstrap@5.3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//commands
+ng new projectName
+
+Creates a new Angular project with the specified project name.
+
+
+ng serve
+
+Builds the application and starts a web server to serve your application during development.
+
+
+ng serve --open
+
+or
+
+ng serve -o
+
+Same as ng serve, but also opens your default web browser to the application.
+
+
+ng generate component componentName
+
+or
+
+ng g c componentName
+
+Generates a new component with the specified name.
+
+
+ng generate service serviceName
+
+or
+
+ng g s serviceName
+
+Generates a new service with the specified name.
+
+
+ng build
+
+Builds your application for production, creating a dist/ folder with the output.
+
+
+ng update
+
+Checks your application for outdated dependencies, and can also update them.
