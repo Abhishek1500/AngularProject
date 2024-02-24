@@ -31,6 +31,28 @@ bootstrap
 npm install bootstrap@5.3
 
 
+module creation
+ng g m home Or ng generate module home
+
+component in module
+ng g c home --module=home Or ng generate component home --m=home
+
+service is responsible for data so keep it mind
+ng g s path/name of servaice   this path is applicable for all
+ng generate service path/name of servaice   
+this path is applicable for all
+service is independent of modules
+//services are injectible as dependecy injection
+
+
+routes
+routes are use to jump from one point to another point over the website little bit like from one page to anotherpage
+
+Learing about Reactive Form module
+it provise Reactive form validation 
+noe there are 2 kid of validations one is Reactive form and other is Template-Driven Form validation
+Reactive form Validation validate the form in attached tyscript class
+where template-Driven Form do it in template let say you get nuber type input ngcheck thing
 
 
 
