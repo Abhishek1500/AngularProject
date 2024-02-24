@@ -1,0 +1,6 @@
+Main components of 
+1) Component   2) Serivece=> use to handle data contact with API   3) Modules for encapsulation
+
+create newapp=> ng new namepapp
+run app=>ng serve
+
