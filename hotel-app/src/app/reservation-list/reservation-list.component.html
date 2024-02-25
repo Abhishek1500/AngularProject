@@ -2,7 +2,7 @@
 
 <h3 class="mt-5 mb-3">Reservation List</h3>
 
-<table class="table table-striped" *ngIf="reservations.length; else noReservation">
+<table class="table table-striped" >
   <thead>
     <th>Guest</th>
     <th>Email</th>
@@ -26,6 +26,7 @@
   </tbody>
 </table>
 
+<div *ngIf="reservations.length; else noReservation"></div>
 <!--ng template dont get render by default it need to be activated-->
 <ng-template #noReservation
   ><!--here #thennameisthere-->

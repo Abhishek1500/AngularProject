@@ -34,9 +34,10 @@ export class ReservationFormComponent implements OnInit {
     let id=this.activatedRoute.snapshot.paramMap.get('id');
     console.log(id);
     if(id){
-      let reservation=this.reservationService.getReservation(id);
-      if(reservation)//this is to add the values to the form patching means when we update these values will be shown
-      this.reservationForm.patchValue(reservation)
+      let reservation=this.reservationService.getReservation(id).subscribe(reservation=>{
+        if(reservation)//this is to add the values to the form patching means when we update these values will be shown
+        this.reservationForm.patchValue(reservation)
+      });
     }
   }
 
@@ -48,9 +49,13 @@ export class ReservationFormComponent implements OnInit {
       let id=this.activatedRoute.snapshot.paramMap.get('id');
       console.log(id);
       if(id){
-        this.reservationService.updateReservation(id,reservation)
+        this.reservationService.updateReservation(id,reservation).subscribe(()=>{
+          console.log("Updated the request")
+        })
       }else{
-        this.reservationService.addReservation(reservation)
+        this.reservationService.addReservation(reservation).subscribe(()=>{
+          console.log("Added the data")
+      })
       }
       //here just on submit the user get navigated
       this.router.navigate(['/list'])

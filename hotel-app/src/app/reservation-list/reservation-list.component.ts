@@ -13,10 +13,15 @@ export class ReservationListComponent {
   constructor(private reservationService: ReservationService){}
   
   ngOnInit():void{
-    this.reservations=this.reservationService.getReservations();
+    //asynchronously working
+    this.reservationService.getReservations().subscribe(reservations=>{
+      this.reservations=reservations
+    });
   }
 
   deleteReservation(id:string) :void{
-    this.reservationService.deleteReservation(id);
+    this.reservationService.deleteReservation(id).subscribe(()=>{
+      console.log("deleted the process");
+    });
   }
 }
