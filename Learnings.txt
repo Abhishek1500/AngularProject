@@ -113,3 +113,14 @@ Builds your application for production, creating a dist/ folder with the output.
 ng update
 
 Checks your application for outdated dependencies, and can also update them.
+
+
+to run in development env
+ng serve --configuration=development
+
+ng add @angular/material
+
+
+ngrx for global state
+look into it not clear that much
+npm install @ngrx/store@16.2 @ngrx/effects@16.2
