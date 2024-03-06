@@ -124,3 +124,12 @@ ng add @angular/material
 ngrx for global state
 look into it not clear that much
 npm install @ngrx/store@16.2 @ngrx/effects@16.2
+
+
+go foe ngrx diagram and look for explanations
+
+
+one reducer work on just only one entity
+
+the app state is immutable and should be just change by reducer 
+how is it first copy the current state and then make changes and then return that new state like string in java
